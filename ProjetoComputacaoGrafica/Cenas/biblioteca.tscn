@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhvltauxjxn2v"]
 
 [ext_resource type="Texture2D" uid="uid://b3kpw7u5y2b4s" path="res://Sprites/Biblioteca.png" id="1_42l1l"]
-[ext_resource type="Script" uid="uid://bm14phudl306e" path="res://Cenas/biblioteca.gd" id="1_ktwk3"]
+[ext_resource type="Script" path="res://Cenas/biblioteca.gd" id="1_ktwk3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ly4nc"]
 animations = [{
@@ -22,14 +22,14 @@ position = Vector2(7, 3)
 script = ExtResource("1_ktwk3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(521, 251)
+position = Vector2(0, 1.52588e-05)
 rotation = 0.523599
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ly4nc")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(533.613, 268.338)
+position = Vector2(10.9999, 18)
 rotation = 1.32645
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_5dsa1")
