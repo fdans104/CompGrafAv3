@@ -24,10 +24,10 @@ position = Vector2(1039, 276)
 position = Vector2(-800.5, 909.7)
 
 [node name="Bloco I" parent="." instance=ExtResource("5_ph1ny")]
-position = Vector2(647, 914)
+position = Vector2(984.293, 893.758)
 
 [node name="Bloco J" parent="." instance=ExtResource("6_hsm80")]
-position = Vector2(837, 1097)
+position = Vector2(1376.01, 1312.59)
 
 [node name="Biblioteca" parent="." instance=ExtResource("7_dj7rn")]
 position = Vector2(369.711, -764.384)
