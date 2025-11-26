@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bybubugpbjj3e"]
+
+[ext_resource type="Script" uid="uid://cx0l6d4xj1pv3" path="res://Cenas/book.gd" id="1_o2v3v"]
+[ext_resource type="Texture2D" uid="uid://d17ciewhu0v8b" path="res://Sprites/UniforGreen.png" id="2_o2v3v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qii0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o2v3v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vv5q3"]
+radius = 12.0416
+
+[node name="GreenBook" type="Area2D" groups=["Livros"]]
+script = ExtResource("1_o2v3v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_qii0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vv5q3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
