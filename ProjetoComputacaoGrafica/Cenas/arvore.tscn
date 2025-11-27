@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqhapin88y78n"]
+
+[ext_resource type="Script" uid="uid://djwjjva3lal36" path="res://Cenas/arvore.gd" id="1_i3peu"]
+[ext_resource type="Texture2D" uid="uid://cgomgxac0d2jy" path="res://Sprites/Arvore (1).png" id="1_n8pdw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3peu"]
+
+[node name="Arvore" type="StaticBody2D"]
+script = ExtResource("1_i3peu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n8pdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_i3peu")

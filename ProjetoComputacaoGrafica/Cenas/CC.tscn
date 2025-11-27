@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://blry6jokh3cai"]
 
-[ext_resource type="Script" path="res://Cenas/cc.gd" id="1_8os46"]
+[ext_resource type="Script" uid="uid://c7qxep4mfie4r" path="res://Cenas/cc.gd" id="1_8os46"]
 [ext_resource type="Texture2D" uid="uid://pafu3nfgatsk" path="res://Sprites/CC.png" id="1_t25qx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0kaf6"]

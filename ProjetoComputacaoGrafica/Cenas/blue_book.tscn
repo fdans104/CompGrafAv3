@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c68ibqlt5guax"]
+
+[ext_resource type="Script" uid="uid://cx0l6d4xj1pv3" path="res://Cenas/book.gd" id="1_a51qb"]
+[ext_resource type="Texture2D" uid="uid://ce8jyci1jvnt2" path="res://Sprites/UniforBlue.png" id="2_a51qb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qii0y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a51qb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vv5q3"]
+radius = 12.4197
+
+[node name="BlueBook" type="Area2D" groups=["Livros"]]
+script = ExtResource("1_a51qb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_qii0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vv5q3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

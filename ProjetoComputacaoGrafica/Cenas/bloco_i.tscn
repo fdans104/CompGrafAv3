@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbqbpoua5ojgs"]
+[gd_scene load_steps=6 format=3 uid="uid://bbqbpoua5ojgs"]
 
-[ext_resource type="Script" path="res://Cenas/bloco_i.gd" id="1_hukd7"]
+[ext_resource type="Script" uid="uid://cqxlrhx7l07ye" path="res://Cenas/bloco_i.gd" id="1_hukd7"]
 [ext_resource type="Texture2D" uid="uid://cacf5u1diixhm" path="res://Sprites/Bloco_C.png" id="1_rjh2p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xovrt"]
@@ -17,6 +17,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3li2e"]
 size = Vector2(1337.5, 342)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chhlm"]
+size = Vector2(776.01, 248)
+
 [node name="Bloco I" type="StaticBody2D"]
 script = ExtResource("1_hukd7")
 
@@ -31,3 +34,13 @@ position = Vector2(2.25, -3)
 rotation = 2.79253
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_3li2e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.512426, 2.46592)
+rotation = -0.349066
+shape = SubResource("RectangleShape2D_chhlm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
